@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flash Sale - Template 1</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #333;
+                font-family: Arial, sans-serif;
+            }
+
+            .sale-background {
+                position: relative;
+                width: 670px;
+                height: 670px;
+                background-image: url("https://s3-alpha-sig.figma.com/img/aade/d9b8/31675510854668dfbe8dfa854e9098b8?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NknnoLft0uejcGITFlDzYEdrRvt4NK3SorthlaR2uaWDfGPwcxNydkdyRXVUVlUdZJyFXAJ5Pq9lN-rR4NK2Ds5wqridvYXxiOneR~LgijF7OKy3SgdfnuHBFI6Wf8AvNdLMBidJXT72rYahUvdlNsIXsGQO9ErwtETA--iOkc44Ng9bqPr8XpRpcB-k1TY0xiWuYMI0KzxAgV790Shz3kTt7HJIjUlZtZ-T7szbh2N1-bRlmX8oVKVljN~Z9DCFNoq4KsQx3dN1Xao0rqY4dK8qIDV4JPpyvtywVG8qR33jWaKIHsGbhqeBm~wRtS5o~SremtxC32ki-CR47roX~g__");
+                background-size: cover;
+                background-position: center;
+                box-sizing: border-box;
+                overflow: hidden;
+            }
+
+            .link-label {
+                position: absolute;
+                background: rgba(255, 255, 255, 0.2);
+                color: #000;
+                font-size: 20px;
+                font-weight: bold;
+                padding: 10px 20px;
+                border-radius: 5px;
+                white-space: nowrap;
+            }
+
+            .link-label.top {
+                top: 28px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .link-label.bottom {
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .link-label.left {
+                top: 50%;
+                left: -50px;
+                transform: translateY(-50%) rotate(-90deg);
+            }
+
+            .link-label.right {
+                top: 50%;
+                right: -50px;
+                transform: translateY(-50%) rotate(90deg);
+            }
+
+            .sale-content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 220px;
+                height: 220px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .sale-content svg {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                transform: rotate(2deg);
+            }
+
+            .sale-content svg text {
+                font-size: 35px;
+                font-weight: 900;
+                text-transform: uppercase;
+                letter-spacing: 8px;
+                fill: #000;
+            }
+
+            .sale-content .discount-text {
+                font-size: 40px;
+                color: #fff;
+                background-color: #000;
+                padding: 15px 25px;
+                border-radius: 50%;
+                z-index: 1;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="sale-background">
+            <div class="link-label top">samplewebsite.com</div>
+            <div class="link-label bottom">samplewebsite.com</div>
+            <div class="link-label left">samplewebsite.com</div>
+            <div class="link-label right">samplewebsite.com</div>
+
+            <div class="sale-content">
+                <svg viewBox="0 0 300 300">
+                    <path
+                        id="backgroundTop"
+                        fill="white"
+                        d="M 42, 145 a 100,123 0 0,1 220,0"
+                        stroke="none"
+                        stroke-width="0"
+                    />
+                    <path
+                        id="curveTop"
+                        fill="transparent"
+                        d="M 50, 158 a 100,100 0 0,1 200,0"
+                    />
+                    <text width="500">
+                        <textPath
+                            xlink:href="#curveTop"
+                            startOffset="25%"
+                            fill="black"
+                        >
+                            FLASH
+                        </textPath>
+                    </text>
+
+                    <path
+                        id="backgroundBottom"
+                        fill="white"
+                        d="M 50, 178 a 100,105 0 0,0 200,0"
+                        stroke="none"
+                        stroke-width="0"
+                    />
+                    <path
+                        id="curveBottom"
+                        fill="transparent"
+                        d="M 50, 172 a 100,100 0 0,0 200,0"
+                    />
+                    <text width="500">
+                        <textPath
+                            xlink:href="#curveBottom"
+                            startOffset="53%"
+                            text-anchor="middle"
+                            fill="black">
+                            SALE
+                        </textPath>
+                    </text>
+                </svg>
+
+                <div class="discount-text">99% <br />off</div>
+            </div>
+        </div>
+    </body>
+</html>
